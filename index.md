@@ -1,6 +1,6 @@
 
-![Chris_Chen](images/IMG_4879.HEIC)
-![PH_Lin](images/IMG_4880.HEIC)
+![Chris_Chen](images/IMG_4879.jpg)
+![PH_Lin](images/IMG_4880.jpg)
 
 ## Welcome to GitHub Pages
 
