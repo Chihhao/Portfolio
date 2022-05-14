@@ -4,41 +4,29 @@
 <style>
 div.gallery {
   border: 1px solid #ccc;
+  padding: 0px;
+  float: left;
+  width: 25%;
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
+div.gallery > img {
   width: 100%;
   height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
 
 @media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
+  div.gallery {
+    width: 50%;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .responsive {
+  div.gallery {
     width: 100%;
   }
 }
@@ -48,19 +36,40 @@ div.desc {
   display: table;
   clear: both;
 }
+
 </style>
 </head>
+
+
 <body>
 
-<h2>3D列印 - 辦公室名牌</h2>
-
-<div class="responsive gallery"><img src="images/IMG_4879.jpg" alt="陳文仁"></div>
-<div class="responsive gallery"><img src="images/IMG_4880.jpg" alt="林柏新"></div>
-<div class="responsive gallery"><img src="images/IMG_4881.jpg" alt="吳棋崴"></div>
-<div class="responsive gallery"><img src="images/IMG_4885.jpg" alt="劉欣怡"></div>
-<div class="responsive gallery"><img src="images/IMG_4896.jpg" alt="陳新武"></div>
-
-<div class="clearfix"></div>
+	<h2>3D列印 - 辦公室名牌</h2>
+	<div id="image-container"></div>
+	<div class="clearfix"></div>
 
 </body>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	 
+	var dir = "images/";
+	var fileextension = ".png";
+	$.ajax({
+		//This will retrieve the contents of the folder if the folder is configured as 'browsable'
+		url: dir,
+		success: function (data) {
+			//List all .png file names in the page
+			$(data).find("a:contains(" + fileextension + ")").each(function () {
+				var filename = this.href.replace(window.location.host, "").replace("http://", "");
+				$("body").append("<img src='" + dir + filename + "'>");
+			});
+		}
+	});
+		
+	
+	
+</script>
+
+
+
 </html>
