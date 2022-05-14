@@ -1,6 +1,6 @@
 
-![Chris_Chen](/3DPrint_Name_Board/image/IMG_4879.HEIC)
-![PH_Lin](/3DPrint_Name_Board/image/IMG_4880.HEIC)
+![Chris_Chen](/3DPrint_Name_Board/images/IMG_4879.HEIC)
+![PH_Lin](/3DPrint_Name_Board/images/IMG_4880.HEIC)
 
 ## Welcome to GitHub Pages
 
