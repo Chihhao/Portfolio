@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-div.gallery {
-  border: 1px solid #ccc;
-  padding: 0px;
-  float: left;
-  width: 25%;
+body{
+	background-color: #333;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-div.gallery > img {
-  width: 100%;
+h1 {	
+	color: yellow;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+	background-color: #444;
+	color: white;
+	text-align: center;
+}
+
+div.gallery {
+  display: block;
+  border: 1px solid #ccc;
+  padding: 3px;
+  float: left;
+  width: 25%;
+  /*aspect-ratio: 4/3;*/
+  /*justify-content: space-around;*/
+
+}
+
+div.gallery img {
+  object-fit: contain;
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  /*max-height: 300px; */
+  /*max-width: 100%;*/
+ object-fit: cover;
+  width: auto;
   height: auto;
+  
+  
+  /*height: 100%;*/
+  /*max-width: 100%; */
+  /*min-height: 160px; */
+  /*max-height: 300px; */
+
 }
 
 * {
@@ -21,13 +57,13 @@ div.gallery > img {
 
 @media only screen and (max-width: 700px) {
   div.gallery {
-    width: 50%;
+    width: 33%;
   }
 }
 
 @media only screen and (max-width: 500px) {
   div.gallery {
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -131,5 +167,8 @@ div.gallery > img {
 <div class="clearfix"></div>
 
 </body>
+
+
+
 
 </html>
